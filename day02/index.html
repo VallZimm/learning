@@ -1,0 +1,33 @@
+<button id="toggle">ON</button>
+</br>
+<img id="bulb1" src="./bulb_off.png" />
+<img id="bulb2" src="./bulb_on.png" hidden />
+
+<style>
+  #toggle {
+    background: red;
+    color: white;
+  }
+  
+  
+</style>
+
+<script>
+  const bulbToggle = document.getElementById("toggle");
+  bulbToggle.addEventListener("click", () => {
+    const bulb1 = document.getElementById("bulb1");
+    const bulb2 = document.getElementById("bulb2");
+    if (bulb1.hidden) 
+{
+      bulb1.hidden = false;
+      bulb2.hidden = true;
+      bulbToggle.innerText = "ON";
+    } 
+else
+ {
+      bulb1.hidden = true;
+      bulb2.hidden = false;
+      bulbToggle.innerText = "OFF";
+    }
+  });
+</script>
